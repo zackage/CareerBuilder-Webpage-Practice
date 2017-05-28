@@ -1,0 +1,246 @@
+/***** Background Color *****/
+/***** Font Color *****/
+/***** Container Dimensions *****/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+.showBlock {
+  display: block; }
+
+.hideBlock {
+  display: none; }
+
+.headerwrapupper {
+  height: 60px;
+  display: flex;
+  background-color: #061F47; }
+  .headerwrapupper img {
+    height: 27px;
+    width: auto;
+    margin: auto 10px; }
+  .headerwrapupper .headernav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end; }
+  .headerwrapupper .headernav > a {
+    padding: 13px;
+    color: #aaaaaa;
+    text-decoration: none; }
+  .headerwrapupper .headernav > a:hover, .headerwrapupper .dropdown:hover {
+    color: white;
+    border-bottom: 3px solid blue; }
+  .headerwrapupper .dropdown {
+    position: relative;
+    color: white;
+    padding: 13px;
+    margin-right: 5px;
+    color: #aaaaaa;
+    text-decoration: none;
+    list-style-type: none;
+    cursor: pointer;
+    background-color: green; }
+    .headerwrapupper .dropdown .drop-nav {
+      position: absolute;
+      right: 10px; }
+      .headerwrapupper .dropdown .drop-nav a {
+        text-decoration: none;
+        padding: 5px;
+        background-color: white;
+        color: black;
+        width: 80px;
+        border: 2px solid #EEEEEE;
+        display: block; }
+  .headerwrapupper .dropdown::after {
+    content: "\25BC";
+    font-size: 18px; }
+
+.searchbar {
+  background-color: #325DA3;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: white; }
+  .searchbar input {
+    margin: 10px;
+    font-weight: 700; }
+  .searchbar input[type=text] {
+    height: 30px;
+    width: 200px;
+    padding: 0 2px; }
+  .searchbar input[type=submit] {
+    height: 32px;
+    padding: 0 4px;
+    color: white;
+    background-color: orange;
+    border: 2px solid orange; }
+  .searchbar input[type=submit]:hover {
+    background-color: #965918;
+    cursor: pointer; }
+
+#main-and-ad {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center; }
+
+#main {
+  width: 770px;
+  height: 100%;
+  margin: 0 10px; }
+
+#ad {
+  width: 200px;
+  height: 50px;
+  margin: 0 10px; }
+
+.jobtitle, .joblocation {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 600; }
+
+.jobtitle {
+  color: #E88325; }
+
+.joblocation {
+  color: #135DA3; }
+
+.companyname {
+  font-size: 18px;
+  color: #666666;
+  font-weight: 600;
+  margin-bottom: 10px; }
+
+.infoui {
+  height: 30px;
+  width: 100%;
+  background-color: #DDDDDD; }
+
+.detailcontainer {
+  display: flex;
+  margin: 5px 0; }
+
+.jobdetail {
+  flex: 3; }
+  .jobdetail h3 {
+    border: 1.5px dashed #bbb;
+    padding: 5px;
+    margin: 5px 0; }
+  .jobdetail p {
+    margin: 15px 0;
+    padding: 6.5px;
+    font-size: 12px;
+    line-height: 18px; }
+
+.detailui {
+  flex: 1;
+  background-color: #ddd;
+  margin-left: 20px; }
+  .detailui .job-snap {
+    line-height: 30px;
+    background-color: #111F6D;
+    padding-left: 6px;
+    color: white; }
+  .detailui .submit {
+    width: 120px;
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+    font-weight: 700;
+    color: white;
+    background-color: orange;
+    padding: 0 20px;
+    margin: 5px auto 0px auto; }
+  .detailui .similar {
+    color: white;
+    line-height: 22px;
+    font-size: 13px;
+    padding-left: 6px;
+    font-weight: 600;
+    background-color: #89898C; }
+  .detailui p:not(.job-snap):not(.submit):not(.similar) {
+    margin: 10px 5px;
+    font-size: 13px;
+    line-height: 20px; }
+  .detailui .contact {
+    margin-top: 20px;
+    font-weight: 600; }
+  .detailui .recommended {
+    margin-top: 30px; }
+
+#footer {
+  width: 100%;
+  /* height: 300px; */ }
+  #footer .helpcenter {
+    line-height: 65px;
+    background-color: #539BC1;
+    text-align: center;
+    padding: auto;
+    font-weight: 500;
+    color: white; }
+    #footer .helpcenter a {
+      color: white;
+      font-weight: 700;
+      text-decoration: none; }
+    #footer .helpcenter a:hover {
+      text-decoration: underline; }
+  #footer .footerbot {
+    height: 370px;
+    background-color: #063E59; }
+    #footer .footerbot .inquire {
+      font-weight: 600;
+      text-align: center;
+      padding: 22px;
+      color: #36B3ED; }
+      #footer .footerbot .inquire a {
+        text-decoration: none;
+        font-weight: 600;
+        color: white; }
+    #footer .footerbot .footer-content {
+      width: 70%;
+      margin: auto; }
+      #footer .footerbot .footer-content .bot-nav-matrix {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5px; }
+        #footer .footerbot .footer-content .bot-nav-matrix .bot-col-nav {
+          display: flex;
+          flex-direction: column; }
+          #footer .footerbot .footer-content .bot-nav-matrix .bot-col-nav a {
+            text-decoration: none;
+            margin: 3px 0; }
+          #footer .footerbot .footer-content .bot-nav-matrix .bot-col-nav .bot-nav-header {
+            color: white;
+            font-size: 16px;
+            font-weight: 700; }
+          #footer .footerbot .footer-content .bot-nav-matrix .bot-col-nav a:not(.bot-nav-header) {
+            color: #6FA1F2;
+            font-size: 12px;
+            padding-left: 10px; }
+        #footer .footerbot .footer-content .bot-nav-matrix .bot-col-spacer {
+          width: 30px; }
+        #footer .footerbot .footer-content .bot-nav-matrix .social {
+          width: 100px; }
+          #footer .footerbot .footer-content .bot-nav-matrix .social p {
+            text-transform: uppercase; }
+      #footer .footerbot .footer-content .misc-info {
+        width: 93%;
+        margin: 14px auto 30px auto;
+        padding-top: 7px;
+        border-top: 2px dotted white;
+        padding-left: 10px; }
+        #footer .footerbot .footer-content .misc-info a, #footer .footerbot .footer-content .misc-info p {
+          font-size: 12px; }
+        #footer .footerbot .footer-content .misc-info a:not(span) {
+          color: #6FA1F2;
+          text-decoration: none; }
+        #footer .footerbot .footer-content .misc-info p, #footer .footerbot .footer-content .misc-info span {
+          color: white; }
+
+/*# sourceMappingURL=style.css.map */

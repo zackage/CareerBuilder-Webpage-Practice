@@ -1,0 +1,364 @@
+/***** Background Color *****/
+$top-nav-background-color: #061F47;
+
+$search-bar-color: #325DA3;
+$side-panel-p-blue: #111F6D;
+$side-panel-p-grey: #89898C;
+$side-panel-background-grey: #DDDDDD;
+
+/***** Font Color *****/
+$top-nav-font-color: #aaaaaa;
+$job-title-color: #E88325;
+$job-loc-color: #135DA3;
+$company-name-color: #666666;
+
+/***** Container Dimensions *****/
+$top-nav-height: 60px;
+$top-nav-interli-padding: 13px;
+$search-bar-height: 80px;
+$logo-margin: 10px;
+$logo-height: 27px;
+
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.showBlock {
+	display: block;
+}
+
+.hideBlock {
+	display: none;
+}
+
+.headerwrapupper {
+	height: $top-nav-height;
+	display: flex;
+	background-color: $top-nav-background-color;
+	
+	img {
+      height: $logo-height;
+      width: auto;
+      margin: auto $logo-margin;
+    }
+	
+	.headernav {
+	  flex: 1;
+	  display: flex;
+	  align-items: center;
+	  justify-content: end;
+	}
+
+	.headernav > a {
+	  padding: $top-nav-interli-padding;
+	  color: $top-nav-font-color;
+      text-decoration: none;
+	}  
+
+	.headernav > a:hover, .dropdown:hover {
+        color: white;
+        border-bottom: 3px solid blue;
+	}
+
+	.dropdown {
+	  position: relative;
+	  color: white;
+	  padding: $top-nav-interli-padding;
+	  margin-right: 5px;
+	  color: $top-nav-font-color;
+      text-decoration: none;
+      list-style-type: none;
+      cursor: pointer;
+      background-color: green;
+
+	  .drop-nav {
+	  	position: absolute;
+	  	right: 10px;
+	  	
+	  	a {
+	  	  text-decoration: none;
+	  	  padding: 5px;
+	  	  background-color: white;
+	  	  color: black;
+	  	  width: 80px;
+	  	  border: 2px solid #EEEEEE;
+	  	  display: block;
+	  	}
+	  }
+	}
+
+	.dropdown::after {
+	  content: "\25BC";
+	  font-size: 18px;
+
+	}
+	
+}
+
+.searchbar {
+	background-color: $search-bar-color;
+	height: $search-bar-height;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 700;
+	color: white;
+	
+	input {
+	  margin: 10px;
+	  font-weight: 700;
+	}
+	
+	input[type=text] {
+	  height: 30px;
+	  width: 200px;
+	  padding: 0 2px;
+	}
+	
+	input[type=submit] {
+	  height: 32px;
+	  padding: 0 4px;
+	  color: white;
+	  background-color: orange;
+	  border: 2px solid orange;
+	}
+
+	input[type=submit]:hover {
+      background-color: #965918;
+      cursor: pointer;
+	}
+}
+
+#main-and-ad {
+    margin: 20px 0;
+	display: flex;
+	justify-content: center;
+}
+
+#main {
+	width: 770px;
+	height: 100%;
+	margin: 0 10px;	  
+}
+
+
+#ad {
+	width: 200px;
+	height: 50px;
+	margin: 0 10px;
+}
+
+.jobtitle, .joblocation{
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.jobtitle {
+	color: $job-title-color;
+}
+
+.joblocation {
+	color: $job-loc-color;
+}
+
+.companyname{
+	font-size: 18px;
+	color: $company-name-color;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.infoui {
+	height: 30px;
+	width: 100%;
+	background-color: $side-panel-background-grey;
+}
+
+.detailcontainer {
+	display: flex;
+	margin: 5px 0;
+}
+
+.jobdetail {
+	flex: 3;
+	
+	h3 {
+	  border: 1.5px dashed #bbb;
+	  padding: 5px;
+	  margin: 5px 0;
+	}
+	
+	p {
+	  margin: 15px 0;
+	  padding: 6.5px;
+	  font-size: 12px;
+	  line-height: 18px;
+	}
+}
+
+.detailui {
+	flex: 1;
+	background-color: #ddd;
+	margin-left: 20px;
+	
+	.job-snap {
+	  line-height: 30px;
+	  background-color: $side-panel-p-blue;
+	  padding-left: 6px;
+	  color: white;
+	}
+	
+	.submit {
+	  width: 120px;
+	  line-height: 30px;
+	  height: 30px;
+	  text-align: center;
+	  font-weight: 700;
+	  color: white;
+	  background-color: orange;
+	  padding: 0 20px;
+	  margin: 5px auto 0px auto;
+	}
+	
+	.similar {
+	  color: white;
+	  line-height: 22px;
+	  font-size: 13px;
+	  padding-left: 6px;
+	  font-weight: 600;
+	  background-color: $side-panel-p-grey;
+
+	}
+	
+	p:not(.job-snap):not(.submit):not(.similar) {
+	  margin: 10px 5px;
+	  font-size: 13px;
+	  line-height: 20px;
+    }
+	
+	.contact {
+	  margin-top: 20px;
+	  font-weight: 600;
+    }
+	
+	.recommended {
+	  margin-top: 30px;
+	}	
+}
+
+#footer {
+	width: 100%;
+	/* height: 300px; */
+	.helpcenter {
+	  line-height: 65px;
+	  background-color: #539BC1;
+	  text-align: center;
+	  padding: auto;
+	  font-weight: 500;
+	  color: white;
+	  
+	  a {
+	    color: white;
+		font-weight: 700;
+	    text-decoration: none;
+	  }
+
+      a:hover {
+        text-decoration: underline;
+      }
+	}
+	  
+	.footerbot {
+	  height: 370px;
+	  background-color: #063E59;
+		
+      .inquire {
+		font-weight: 600;
+		text-align: center;
+		padding: 22px;
+		color: #36B3ED;
+		
+		a {
+		  text-decoration: none;
+		  font-weight: 600;
+		  color: white;
+
+		}
+		
+	  }
+	  
+	  .footer-content {
+	    width: 70%;
+	    margin: auto;
+		
+		.bot-nav-matrix {
+		  display: flex;
+		  justify-content: space-around;
+
+		  margin-bottom: 5px;
+		  
+		  .bot-col-nav {
+		    display: flex;
+			flex-direction: column;
+			
+			a {
+			  text-decoration: none;
+			  margin: 3px 0;
+			}
+			
+			.bot-nav-header {
+			  color: white;
+			  font-size: 16px;
+			  font-weight: 700;
+			}
+			
+			a:not(.bot-nav-header) {
+			  color: #6FA1F2;
+			  font-size: 12px;
+			  padding-left: 10px;
+			}
+		  }
+		  
+		  .bot-col-spacer {
+		    width: 30px;
+	      }
+		  
+		  .social {
+			width: 100px;
+			
+			p {
+			  text-transform: uppercase;
+			}
+	      }
+		}
+		
+		.misc-info {
+		  width: 93%;
+		  margin: 14px auto 30px auto;
+		  padding-top: 7px;
+		  border-top: 2px dotted white;
+		  padding-left: 10px;
+		  
+		  a, p {
+		    font-size: 12px;
+	      }
+		  
+		  a:not(span) {
+		      color: #6FA1F2;
+			  text-decoration: none;
+	      }
+
+		  p, span {
+		    color: white;
+		  }  
+		}
+	  }
+	}
+}
